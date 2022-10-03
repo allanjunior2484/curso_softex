@@ -1,0 +1,25 @@
+print("##########################################################################")
+print("CALCULADORA")
+print("##########################################################################")
+
+op = str (input ("Digite qual operação deseja realizar \n+ para SOMA \n- para SUBTRAÇÃO \n/ para DIVISÃO \n* para MULTIPLICAÇÃO \n\n DIGITE: "))
+
+print("##########################################################################")
+
+n1 = float(input("DIGITE O PRIMEIRO NÚMERO:  "))
+n2 = float(input("DIGITE O SEGUNDO NÚMERO:  "))
+
+if op == '+':
+    print(n1 + n2)
+
+elif op == '-':
+    print(n1 - n2) 
+
+elif op == '/':
+    print(n1 / n2)
+
+elif op == '*':
+    print(n1 * n2)
+
+else:
+    print("ERRO")
