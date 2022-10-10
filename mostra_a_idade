@@ -1,0 +1,10 @@
+def idade():
+    nome = str (input("digite seu nome:  "))
+    ano = int (input("em que ano voçê nasceu?  "))
+    if  ano < 1922  or ano > 2021:
+        print("ERRO digite corretamente o ano em que nasceu")
+        idade()    
+    else:
+        ano_ = (2022 - ano)
+        print(nome, " nasceu em ", ano, "e completará/completou", ano_, " anos de idadae!!!")
+idade() 
