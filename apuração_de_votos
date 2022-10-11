@@ -1,0 +1,59 @@
+def s():
+    print (60 *'#')
+def t():
+    print (70 *'-')
+
+ix = 0
+iy = 0
+iz = 0
+ibn = 0
+votacao = True
+s()
+print ("OLÁ ESSE É UM SISTEMA DE VOTAÇÃO\n\n ESSES SÃO OS CANDIDATOS\n\n CANDIDATO_X : 889\n CANDIDATO_Y: 847\n CANDIDATO_Z: 515\n")
+
+s()
+while votacao == True:
+
+    voto = (input("Digite o numero do seu candidato:  "))
+
+    if voto == '889':    
+      ix = (ix+1)
+
+    elif voto == '847':
+      iy = (iy+1)
+
+    elif voto == '515':
+      iz = (ix+1)
+
+    else:
+      ibn = (ibn+1) 
+
+    res = (input("DESEJA QUE A APURAÇÃO CONTINUE? s/n : "))
+    if res != 's':
+      votacao = False
+    
+    total = (ix+iy+iz+ibn)
+
+s()
+print("\nAPURAMENTO DE VOTOS \n\n CANDIDATO_X", ix)
+t()
+print("\nCANDIDATO_Y ", iy, " VOTOS")
+t()
+print("\nCANDIDATO_Z", iz, " VOTOS")
+t()
+print("\nVOTOS BRANCOS/NULOS", ibn, " VOTOS")
+s()
+
+s()    
+print("\nTOTAL DE VOTOS: ", total)  
+
+s()
+if ix > iy and ix > iz:
+   print("\n\nCANDIDATO_X VENCEU!!!")
+
+elif iy > ix and iy > iz:
+   print("\n\nCANDIDATO_Y VENCEU!!!") 
+
+elif iz > ix and iz > iy:
+   print("\n\nCANDIDATO_Z VENCEU!!!\n\n")
+s()
