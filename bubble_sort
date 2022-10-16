@@ -1,0 +1,11 @@
+def bb_sort(lista):
+    for pulo in range(len(lista)-1,0,-1):
+        for i in range (pulo):
+            if lista [i] > lista [i+1]:
+                atual = lista[i]
+                lista [i] = lista[i+1]
+                lista[i+1] = atual
+
+lista = [4,3,16,18,59,22,17,99,35]
+bb_sort(lista)
+print(lista)
