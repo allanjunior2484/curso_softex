@@ -1,0 +1,63 @@
+int* realoca(int* ptr, int* size)
+{
+ int count,
+  add;
+ printf("Quantos números colocaremos no vetor?: ");
+ scanf("%d", &add); 
+ ptr = (int *) realloc(ptr, (*size + add)*sizeof(int) );
+ if(ptr)
+ {
+  for(count=0 ; count < add ; count++)
+  {
+   printf("Numero [%d]: ", count+1);
+   scanf("%d", &ptr[*size + count]);
+  }
+  *size += add;
+ }
+ else
+ {
+  printf("Espaço em memória insuficiente\n");
+  free(ptr);
+  exit(1);
+ }
+ return ptr;
+}
+void exibe(int* ptr, int size)
+{
+ int count;
+ for(count=0 ; count<size ; count++)
+  printf("%3d", ptr[count]); 
+}
+int menu()
+{
+ int opcao;
+ printf("Qual opção você deseja? 0 - Sair, 1 - Adiciona mais números, 2 - Exibir números \n");
+ printf("Opcao: ");
+ scanf("%d", &opcao);
+ return opcao;
+}
+int main(void)
+{
+ int opcao,
+  size=0,
+  ptr=NULL;
+ do
+ {
+  switch(menu())
+  {
+   case 0:
+     opcao=0;
+     break;
+   case 1:
+     ptr=realoca(ptr,&size);
+     break;
+   case 2:
+     exibe(ptr, size);
+     break;
+   default:
+     printf("Inválida.");
+  }
+ }while(opcao);
+ free(ptr);
+ return 0;
+}
