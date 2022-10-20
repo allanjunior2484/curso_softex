@@ -1,0 +1,19 @@
+class Pessoa:
+
+    def criarNome(self,nome):
+        self.nome = nome
+    
+    def criarIdade(self,idade):
+        self.idade = idade
+        
+    def receberNome(self):
+        return self.nome
+
+    def receberIdade(self):
+        return self.idade
+
+pessoa = Pessoa()
+pessoa.criarNome("allan")
+pessoa.criarIdade(18)
+print (pessoa.nome)
+print (pessoa.idade)
