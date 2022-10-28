@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta charset="UTF-8">
+<head>
+    <title>Lampada_acesa/apagada</title>
+</head>
+<body>
+    <header>
+        <h2>Allan_Jr</h2>
+    </header>
+    <main>
+        <div>
+            <img src="lampada_off.jpg" alt="Lâmpada" id='lamp'>
+        </div>
+        <div>
+            <button id='liga'>acender</button>
+            <button id='desliga'>apagar</button>
+        </div>
+    </main>
+    <script>
+        const liga = document.getElementById ( 'liga' );
+        const desliga = document.getElementById ( 'desliga' );
+        const lamp = document.getElementById ( 'lamp' );
+        function ligar () {lamp.src = 'lampada_on.jpg';}
+        function desligar () {lamp.src = 'lampada_off.jpg';}
+        liga.addEventListener ( 'click', ligar );
+        desliga.addEventListener ( 'click', desligar );
+    </script>
+</body>
+</html>
