@@ -1,0 +1,23 @@
+#################################################################################
+def numero_de_letras():
+   palavra = str (input ("digite uma palavra: "))
+   print (len(palavra, "letras"))
+numero_de_letras()
+
+#################################################################################
+def conta_vogais(string):
+    string = string.lower() 
+    vogais = 'aeiou'
+    return {i: string.count(i) for i in vogais if i in string}
+
+print(conta_vogais('curso de programaçao acelerada softex'))
+
+#################################################################################
+
+def contar_letras(string):
+    string = string.lower() 
+    letra = 'abcdefghijklmnopqrstuvwxyz'
+    return {i: string.count(i) for i in letra if i in string}
+
+print(contar_letras('curso de programaçao acelerada softex'))
+##################################################################################
